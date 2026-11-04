@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>Mapa de produto | Plano de rotina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Plano de rotina - início">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>Plano de rotina</span>
+        </a>
+        <nav class="topnav" aria-label="Navegação principal">
+          <a class="active" href="#requisitos">Requisitos</a>
+          <a href="#visao">Visão geral</a>
+        </nav>
+        <button class="icon-button" type="button" aria-label="Abrir menu" aria-expanded="false" id="menu-button">
+          <span></span><span></span>
+        </button>
+      </header>
+
+      <main id="top">
+        <section class="hero" id="visao">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Produto em construção <span class="status-dot"></span></p>
+            <h1>Uma rotina que<br /><em>acompanha você.</em></h1>
+            <p class="hero-text">Do compromisso ao deslocamento, este é o mapa para transformar dias cheios em decisões mais leves.</p>
+            <a class="primary-button" href="#requisitos">Explorar requisitos <span aria-hidden="true">&#8594;</span></a>
+          </div>
+          <div class="hero-orbit" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orbit orbit-three"></div>
+            <div class="orbit-core"><span>12</span><small>itens<br />mapeados</small></div>
+            <div class="orbit-tag tag-top">foco</div>
+            <div class="orbit-tag tag-right">flexibilidade</div>
+            <div class="orbit-tag tag-bottom">clareza</div>
+          </div>
+        </section>
+
+        <section class="summary-grid" aria-label="Resumo do produto">
+          <article class="summary-item"><span class="summary-number">12</span><span class="summary-label">histórias de usuário</span></article>
+          <article class="summary-item"><span class="summary-number">04</span><span class="summary-label">frentes de rotina</span></article>
+          <article class="summary-item"><span class="summary-number">03</span><span class="summary-label">níveis de entrega</span></article>
+          <p class="summary-note">Cada requisito nasce de uma pergunta simples: <strong>como devolver tempo para o que importa?</strong></p>
+        </section>
+
+        <section class="requirements-section" id="requisitos">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span class="eyebrow-line"></span> Backlog priorizado</p>
+              <h2>O que vamos<br /><em>tornar possível.</em></h2>
+            </div>
+            <p class="section-intro">Uma visão compartilhada das entregas, do impacto esperado e das relações entre cada peça do produto.</p>
+          </div>
+
+          <div class="toolbar" aria-label="Controles da tabela">
+            <label class="search-box"><span aria-hidden="true">&#8981;</span><input id="search-input" type="search" placeholder="Buscar requisito..." /></label>
+            <label class="select-box"><span>Prioridade</span><select id="priority-filter"><option value="all">Todas</option><option value="Must Have">Must Have</option><option value="Should Have">Should Have</option><option value="Could Have">Could Have</option><option value="Won't Have">Won't Have</option></select></label>
+            <button class="clear-button" id="clear-button" type="button">Limpar filtros</button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <caption class="sr-only">Backlog de histórias de usuário</caption>
+              <thead>
+                <tr>
+                  <th scope="col">ID <button class="sort-button" data-sort="id" aria-label="Ordenar por ID">&#8597;</button></th>
+                  <th scope="col">Título</th>
+                  <th scope="col">Valor de negócio</th>
+                  <th scope="col">Prioridade</th>
+                  <th scope="col">Estimativa</th>
+                  <th scope="col">Dependências</th>
+                </tr>
+              </thead>
+              <tbody id="requirements-body"></tbody>
+            </table>
+            <div class="empty-state" id="empty-state" hidden>Nenhum requisito encontrado. Tente outra busca.</div>
+          </div>
+          <div class="table-footer"><span id="result-count">12 requisitos</span><span>Estimativas em pontos</span></div>
+        </section>
+      </main>
+
+      <footer class="footer"><span>Plano de rotina <b>/</b> visão de produto</span><span>Feito para dias mais possíveis.</span></footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
